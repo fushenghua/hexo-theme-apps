@@ -1,28 +1,28 @@
-<<<<<<< HEAD
-# Landscape
 
-A brand new default theme for [Hexo].
+# hexo-theme-apps
 
-- [Preview](http://hexo.io/hexo-theme-landscape/)
+A brand new hexo-theme-apps theme for [Hexo].
+
+- [Preview](http://fuchenxuan.cn/YouMate/)
 
 ## Installation
 
 ### Install
 
 ``` bash
-$ git clone https://github.com/hexojs/hexo-theme-landscape.git themes/landscape
+$ git clone https://github.com/fushenghua/hexo-theme-apps.git themes/official_apps
 ```
 
-**Landscape requires Hexo 2.4 and above.** If you would like to enable the RSS, the [hexo-generate-feed] plugin is also required.
+**official_apps requires Hexo 2.4 and above.** If you would like to enable the RSS, the [hexo-generate-feed] plugin is also required.
 
 ### Enable
 
-Modify `theme` setting in `_config.yml` to `landscape`.
+Modify `theme` setting in `_config.yml` to `official_apps`.
 
 ### Update
 
 ``` bash
-cd themes/landscape
+cd themes/official_apps
 git pull
 ```
 
@@ -70,7 +70,7 @@ google_plus:
 
 ### Fancybox
 
-Landscape uses [Fancybox] to showcase your photos. You can use Markdown syntax or fancybox tag plugin to add your photos.
+official_apps uses [Fancybox] to showcase your photos. You can use Markdown syntax or fancybox tag plugin to add your photos.
 
 ```
 ![img caption](img url)
@@ -82,7 +82,7 @@ Landscape uses [Fancybox] to showcase your photos. You can use Markdown syntax o
 
 You can put your sidebar in left side, right side or bottom of your site by editing `sidebar` setting.
 
-Landscape provides 5 built-in widgets:
+official_apps provides 5 built-in widgets:
 
 - category
 - tag
@@ -111,7 +111,4 @@ All of them are enabled by default. You can edit them in `widget` setting.
 [Font Awesome]: http://fontawesome.io/
 [Grunt]: http://gruntjs.com/
 [hexo-generate-feed]: https://github.com/hexojs/hexo-generator-feed
-=======
-# hexo-theme-apps
-hexo-theme-apps
->>>>>>> a9382dbb49f68d7a7318a982a492db12531a1e43
+

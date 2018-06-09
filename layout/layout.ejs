@@ -1,0 +1,32 @@
+<%- partial('_partial/head') %>
+<body data-spy="scroll" data-target=".navbar-collapse">
+  <div class="culmn">
+        <!--Home page style-->
+        <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+        
+        <%- body %>
+
+        <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+        <%- partial('_partial/after-footer') %>
+  </div>
+
+ 
+  <!-- <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %> -->
+
+   <!-- JS includes -->
+
+   <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+   <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+   <script src="assets/js/jquery.magnific-popup.js"></script>
+   <script src="assets/js/jquery.easing.1.3.js"></script>
+   <script src="assets/js/swiper.min.js"></script>
+   <script src="assets/js/jquery.collapse.js"></script>
+   <script src="assets/js/bootsnav.js"></script>
+
+
+
+   <script src="assets/js/plugins.js"></script>
+   <script src="assets/js/main.js"></script>
+</body>
+</html>

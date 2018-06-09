@@ -1,0 +1,75 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%- partial('google-analytics') %>
+  <%
+  var title = page.title;
+
+  if (is_archive()){
+    title = __('archive_a');
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = __('category') + ': ' + page.category;
+  } else if (is_tag()){
+    title = __('tag') + ': ' + page.tag;
+  }
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+  <% if (theme.rss){ %>
+    <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.favicon %>">
+  <% } %>
+  <% if (config.highlight.enable){ %>
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <% } %>
+  <!-- <%- css('css/style') %> -->
+  
+
+  <!--Google Font link-->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="assets/css/swiper.min.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/iconfont.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/bootsnav.css">
+
+  <!-- <%- css('/css/bootsnav.css') %>
+  <%- css('/css/swiper.min.css') %>
+  <%- css('/css/animate.css') %>
+  <%- css('/css/responsive.css') %>
+  <%- css('/css/iconfont.css') %>
+  <%- css('/css/font-awesome.min.css') %>
+  <%- css('/css/magnific-popup.css') %> -->
+  <!--For Plugins external css-->
+  <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
+  <!--Theme custom css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!--Theme Responsive css-->
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+
+  <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  
+  
+</head>

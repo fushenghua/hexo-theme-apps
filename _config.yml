@@ -1,6 +1,6 @@
 # Header
 menu:
-  Home: /
+  Home: '#home'
   Archives: /archives
   Features: '#features'
   Download: '#download'
